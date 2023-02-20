@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GP_Calculator.iml" filepath="$PROJECT_DIR$/.idea/GP_Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../snake_game/.idea/snake_game.iml" filepath="$PROJECT_DIR$/../snake_game/.idea/snake_game.iml" />
     </modules>
   </component>
 </project>

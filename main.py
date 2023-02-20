@@ -1,11 +1,15 @@
 from brain_code import Grading
 from tkinter import *
+import runpy
+import scoreboard
+import snake
 
 window = Tk()
 window.title("Grade Point Calculator")
 window.minsize(600, 600)
 window.config(padx=50, pady=50)
 brain = Grading()
+Final_Grade_point = 0
 names = []
 names2 = []
 names3 = []
@@ -14,6 +18,7 @@ scores2 = []
 scores3 = []
 RED = "#e7305b"
 GREEN = "#9bdeac"
+
 
 def get_course():
     #print(spin_one.get())
@@ -62,11 +67,15 @@ def work_on():
         threes += 3
 
     Gp = total / (ones + threes + twos)
+    Final_Grade_point = Gp
+    label_five.config(text=f"{Gp}")
     if Gp >= 3:
         label_five.config(fg=GREEN)
+        runpy.run_path(path_name='gamework.py')
     else:
         label_five.config(fg=RED)
-    label_five.config(text=f"{Gp}")
+
+    print(Final_Grade_point)
 
 def when_done():
     for i in names:
