@@ -1,5 +1,5 @@
 from turtle import Turtle
-import random
+import secrets
 
 
 class Food(Turtle):
@@ -14,7 +14,7 @@ class Food(Turtle):
         self.refresh()
 
     def refresh(self):
-        random_x = random.randint(-250, 250)
-        random_y = random.randint(-250, 250)
+        random_x = secrets.SystemRandom().randint(-250, 250)
+        random_y = secrets.SystemRandom().randint(-250, 250)
         self.goto(random_x, random_y)
 
